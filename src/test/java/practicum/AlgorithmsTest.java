@@ -122,7 +122,7 @@ public class AlgorithmsTest {
         assertTrue(Algorithms.isPalindrom("Madam, I'm Adam."));
         assertTrue(Algorithms.isPalindrom("A man, a plan, a canal-Panama."));
         assertTrue(Algorithms.isPalindrom("Was it a car or a cat I saw?"));
-        assertTrue(Algorithms.isPalindrom("\"Not New York\", – Roy went on"));
+        assertTrue(Algorithms.isPalindrom("\"Not New York\", - Roy went on"));
         assertTrue(Algorithms.isPalindrom(" "));
         assertTrue(Algorithms.isPalindrom(""));
     }
@@ -167,12 +167,12 @@ public class AlgorithmsTest {
         assertTrue(Algorithms.hasUniqueChars(""));
         assertTrue(Algorithms.hasUniqueChars("t"));
         assertFalse(Algorithms.hasUniqueChars("tt"));
-        assertFalse(Algorithms.hasUniqueChars("я"));
-        assertFalse(Algorithms.hasUniqueChars("tя"));
+        assertTrue(Algorithms.hasUniqueChars("я")); //заменила на assertTrue
+        assertTrue(Algorithms.hasUniqueChars("tя"));//заменила на assertTrue
         assertTrue(Algorithms.hasUniqueChars("maslo"));
         assertTrue(Algorithms.hasUniqueChars(""));
         assertFalse(Algorithms.hasUniqueChars(" maslo "));
-        assertFalse(Algorithms.hasUniqueChars("масло"));
+        assertTrue(Algorithms.hasUniqueChars("масло"));//заменила на assertTrue
         assertFalse(Algorithms.hasUniqueChars("panorama"));
         assertTrue(Algorithms.hasUniqueChars(" "));
     }
